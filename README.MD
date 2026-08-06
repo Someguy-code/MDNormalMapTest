@@ -5,7 +5,7 @@ according to the angle between a directional light and the normals. By default t
 It's possible to manually control the direction and toggle the texture and light diffuse and specular components. Random spinning will resume automaticaly
 after 3 seconds of inactivity.
 
-[<img src="readmeresources/SampleImage.png" width="636" height="476"/>](https://www.youtube.com/embed/Zn50HsH6ntU)
+[<p align="center"><img src="readmeresources/SampleImage.png" width="636" height="476"/></p>](https://www.youtube.com/embed/Zn50HsH6ntU)
 
 ## Tech Stack:
 * [SGDK 2.11](https://github.com/Stephane-D/SGDK/releases/tag/v2.11) for handling all Sega Megadrive low-level management
