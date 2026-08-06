@@ -5,7 +5,9 @@ according to the angle between a directional light and the normals. By default t
 It's possible to manually control the direction and toggle the texture and light diffuse and specular components. Random spinning will resume automaticaly
 after 3 seconds of inactivity.
 
-## Teck Stack:
+[<img src="readmeresources/SampleImage.png" width="636" height="476"/>](https://www.youtube.com/embed/Zn50HsH6ntU)
+
+## Tech Stack:
 * [SGDK 2.11](https://github.com/Stephane-D/SGDK/releases/tag/v2.11) for handling all Sega Megadrive low-level management
 * Visual Studio Code 
 * Genesis Code extension for Visual Studio Code
@@ -16,7 +18,7 @@ after 3 seconds of inactivity.
 * Blender for sample torus modeling + normal and albdedo textures rendering
 * A custom conversion tool that's not yet ready for public usage
 
-## Thanks
+## Special thanks
 I'd like to thank the following people for making this project possible
 * Stephane Dallongeville for the creation of SGDK
 * Kaze Emanuar for suggesting encoding normal map in palletized image in [this video](https://www.youtube.com/watch?v=xIUkoUEMf_g&t=462s)
