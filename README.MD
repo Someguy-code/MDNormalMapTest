@@ -7,6 +7,15 @@ after 3 seconds of inactivity.
 
 [<p align="center"><img src="readmeresources/SampleImage.png" width="636" height="476"/></p>](https://www.youtube.com/embed/Zn50HsH6ntU)
 
+## Controls
+* You can press any button during the title screen to shorten its duration.
+* Use the D-PAD in port 1 controller or a Sega Mouse in port 2 to change the light direction
+* Use the A button in port 1 controller or the left button in port 2 Sega Mouse to toggle the checkered texture
+* Use the B button in port 1 controller or the right button in port 2 Sega Mouse to cycle the state of diffuse and specular components
+
+## Tech breakdown:
+TODO
+
 ## Tech Stack:
 * [SGDK 2.11](https://github.com/Stephane-D/SGDK/releases/tag/v2.11) for handling all Sega Megadrive low-level management
 * Visual Studio Code 
