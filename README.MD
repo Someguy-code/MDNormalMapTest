@@ -5,6 +5,7 @@ It's possible to manually control the direction and toggle the texture and light
 after 3 seconds of inactivity.
 
 [(readmeresources/sampleimage.png)](https://www.youtube.com/embed/Zn50HsH6ntU)
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 ## Controls
 * You can press any button during the title screen to shorten its duration.
