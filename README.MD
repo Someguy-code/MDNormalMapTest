@@ -35,6 +35,7 @@ The material file contains:
 Shades data is stored in 2 different components:
     * **Diffuse:** Each shade is the lerp between pure black and the light color for its corresponding level.
     * **Specular:** This component is optional. Follows the Blinn-Phong reflection model. Each shade is also the lerp between pure black and the light color for it's corresponding level. But the level doesn't grow lienarly. Instead it's computed as: specular intensity * pow(level, specular hardness). **NOTE:** Specular is additive, so it must not be modulated by albedo colors. The final color must be computed in run time.
+
 **NOTE:** When specular component is not used, diffuse shades can be stored directly as 16-bit VDP colors (the exact data that will be uploaded to CRAM). This saves a few bit manipulations in run time to generate them. But in order to use the specular component we need to perform color math, so it's better to store them as non-packed RGB333 to keep direct access to individual components.
 
 ### Loading the material file
