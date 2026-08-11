@@ -6,7 +6,7 @@ after 3 seconds of inactivity.
 
 [()](https://www.youtube.com/embed/Zn50HsH6ntU)
 
-[![Watch video](readmeresources/sampleimage.png)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "watch video")
+[![Watch video]("readmeresources/SampleImage.png")](https://www.youtube.com/watch?v=StTqXEQ2l-Y "watch video")
 
 ## Controls
 * You can press any button during the title screen to shorten its duration.
