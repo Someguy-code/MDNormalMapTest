@@ -22,7 +22,7 @@ The normal map must be quantized with the chosen normals pallete. The albedo ima
 
 #### Encoded image
 The 64 colors Megadrive pallete is divided in four 16 color sub-palletes. Well, actually 15, because the first entry is intepreted as transparent. Each 8x8 tile can only use one of these sub-palletes. If we want to use more than 15 colors in each of these regions, we need to layer multiple images one on top of another (be it using sprites or tile-map planes). For example, the torus in this demo requires 26 pallete entries (2 albedo colors * 13 normals), so we need to split the image in 2 layers
-<p align="center"><img src="readmeresources/splitimages.png"/></p>
+<p align="center"><img src="readmeresources/simplitimages.png"/></p>
 The color palette in the resulting image(s) is not relevant for the lightning algorithm, but for debugging purposes they should convey the encoded properties.
 
 #### Material file
@@ -39,7 +39,7 @@ Shades data is stored in 2 different components:
 ### Loading the material file
 Material files can be directly attached to the ROM using SGDK's rescomp.
 Normals groups need to be processed in loading time to compute the absolute pallete indices after mapping each of them to the sub-palletes specified by the user.
-<p align="center"><img src="readmeresources/material.png"/></p>
+<p align="center"><img src="readmeresources/materialentries.png"/></p>
 In order to save some RAM, we can leave all the shades data in the ROM. We still need to create the pointers to them in run time, though. **NOTE:** VDP colors are 16-bit integers. In order to access them, they must be aligned to 16-bits. Depending on the contents on the material file, we may need to add one byte of padding before the start of the diffuse component.
 
 ### Runtime light computation
