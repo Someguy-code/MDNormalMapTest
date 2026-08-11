@@ -16,6 +16,8 @@ after 3 seconds of inactivity.
 The idea is exploiting the fact Sega Megarive graphics are pallete-based. Computing the light of every pixel and uploading the result to the VRAM would be extremely expensive (although I must admit I never got to implement that approach so I do not have actual measurements). Instead, we can choose a set of normal directions we want to support (a normals pallete) and assign each of them to a specific entry in the Color RAM. Then we can compute the lighting for each of these entries and all pixels using them will be automatically updated.
 This technique supports one double sided colored directional light (the color can be different for each side). The lighting function includes diffuse and specular components.
 
+If you prefer to read the code, check directly the file [src/engine/material/material.c](src/engine/material/material.c)
+
 ### Image conversion
 The first step is converting the source images (albedo, mask and normal map) to a indexed image + a material file containing the actual properties for each material entry.
 <p align="center"><img src="readmeresources/imageconversiondiagram.png"/></p>
