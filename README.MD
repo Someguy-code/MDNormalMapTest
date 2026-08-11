@@ -56,7 +56,8 @@ The specular shade is then added to the diffuse shade to obtain the final color.
 
 ### Limitations
 The main limitation is the number of colors available in the CRAM. We need one color entry for each valid combination of properties (in this case albedo and normal). Moreover, since the colors are split in 4 sub-palletes, mixing and matching them is even more complex. As already mentioned, this problem can be mitigated by layering multiple images, each with a different sub-palette. The problem with this approach is every layer wastes VRAM and sprites/scroll planes.
-On the flip side, the fewer the entries we need to compute the lighting for, the faster the smaller the processing cost.
+
+On the flip side, the fewer the entries we need to compute the lighting for, the smaller the processing cost.
 
 ### Cost
 Lighting the torus with both diffuse and specular takes around 24% of the frame:
