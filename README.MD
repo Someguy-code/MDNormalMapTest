@@ -4,8 +4,9 @@ Demo showcasing the usage of normal maps on a Sega Megadrive. It shows a checker
 It's possible to manually control the direction and toggle the texture and light diffuse and specular components. Random spinning will resume automaticaly
 after 3 seconds of inactivity.
 
-[(readmeresources/sampleimage.png)](https://www.youtube.com/embed/Zn50HsH6ntU)
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+[()](https://www.youtube.com/embed/Zn50HsH6ntU)
+
+[![Watch video](readmeresources/sampleimage.png)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "watch video")
 
 ## Controls
 * You can press any button during the title screen to shorten its duration.
