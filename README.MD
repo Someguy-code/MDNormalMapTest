@@ -42,7 +42,9 @@ Shades data is stored in 2 different components:
 Material files can be directly attached to the ROM using SGDK's rescomp.
 Normals groups need to be processed in loading time to compute the absolute pallete indices after mapping each of them to the sub-palletes specified by the user.
 <p align="center"><img src="readmeresources/materialentries.png"/></p>
-In order to save some RAM, we can leave all the shades data in the ROM. We still need to create the pointers to them in run time, though. **NOTE:** VDP colors are 16-bit integers. In order to access them, they must be aligned to 16-bits. Depending on the contents on the material file, we may need to add one byte of padding before the start of the diffuse component data.
+In order to save some RAM, we can leave all the shades data in the ROM. We still need to create the pointers to them in run time, though.
+
+**NOTE:** VDP colors are 16-bit integers. In order to access them, they must be aligned to 16-bits. Depending on the contents on the material file, we may need to add one byte of padding before the start of the diffuse component data.
 
 ### Runtime light computation
 The lighting is computed for each component of each material entry.
