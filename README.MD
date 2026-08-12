@@ -13,7 +13,7 @@ after 3 seconds of inactivity.
 * Use the B button in port 1 controller or the right button in port 2 Sega Mouse to cycle the state of diffuse and specular components
 
 ## Tech breakdown:
-The idea is exploiting the fact Sega Megarive graphics are pallete-based. Computing the light of every pixel and uploading the result to the VRAM would be extremely expensive (although I must admit I never got to implement that approach so I do not have actual measurements). Instead, we can choose a set of normal directions we want to support (a normals pallete) and assign each of them to a specific entry in the Color RAM. Then we can compute the lighting for each of these entries and all pixels using them will be automatically updated.
+The idea is exploiting the fact Sega Megarive graphics are pallete-based (that is, each pixel represents an index to a limited pallete of colors rather than the color itself). Computing the light of every pixel and uploading the result to the VRAM would be extremely expensive (although I must admit I never got to implement that approach so I do not have actual measurements). Instead, we can choose a set of normal directions we want to support (a normals pallete) and assign each of them to a specific entry in the Color RAM (the memory region of the Megadrive graphic's chip holding the pallete data). Then we can compute the lighting for each of these entries and all pixels using them will be automatically updated.
 This technique supports one double sided colored directional light (the color can be different for each side). The lighting function includes diffuse and specular components.
 
 If you prefer to read the code, check directly the file [src/engine/material/material.c](src/engine/material/material.c)
@@ -26,7 +26,7 @@ The normal map must be quantized with the chosen normals pallete. The albedo ima
 #### Encoded image
 The 64 colors Megadrive pallete is divided in four 16 color sub-palletes. Well, actually 15 colors, because the first entry is intepreted as transparent. Each 8x8 tile can only use one of these sub-palletes. If we want to use more than 15 colors in any of these regions, we need to layer multiple images (be it using sprites or tile-map planes). For example, the torus in this demo requires 26 pallete entries (2 albedo colors * 13 normals). So, since that goes beyond the 15 colors boundary, we need to split the image in 2 layers:
 <p align="center"><img src="readmeresources/simplitimages.png"/></p>
-The color palette in the resulting image(s) is not relevant for the lightning algorithm, but for debugging purposes they should convey the encoded properties.
+The color palette in the resulting image(s) is not relevant for the lighting algorithm, but for debugging purposes they should convey the encoded properties.
 
 #### Material file
 The material file contains:
