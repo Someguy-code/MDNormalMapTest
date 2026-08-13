@@ -1,6 +1,6 @@
 # Normal map demo
 
-Demo showcasing the usage of normal maps on a Sega Megadrive. It shows a checkered torus with a double-sided directional light spinning randomly around it.
+Demo showcasing the usage of normal maps (texture that defines the surface direction for every pixel) on a Sega Megadrive. It shows a checkered torus with a double-sided directional light spinning randomly around it.
 It's possible to manually control the direction and toggle the texture and light diffuse and specular components. Random spinning will resume automaticaly
 after 3 seconds of inactivity.
 
@@ -13,7 +13,7 @@ after 3 seconds of inactivity.
 * Use the B button in port 1 controller or the right button in port 2 Sega Mouse to cycle the state of diffuse and specular components
 
 ## Tech breakdown:
-The idea is exploiting the fact Sega Megarive graphics are pallete-based (that is, each pixel represents an index to a limited pallete of colors rather than the color itself). Computing the light of every pixel and uploading the result to the VRAM would be extremely expensive (although I must admit I never got to implement that approach so I do not have actual measurements). Instead, we can choose a set of normal directions we want to support (a normals pallete) and assign each of them to a specific entry in the Color RAM (the memory region of the Megadrive graphic's chip holding the pallete data). Then we can compute the lighting for each of these entries and all pixels using them will be automatically updated.
+The idea is exploiting the fact Sega Megadrive graphics are pallete-based (that is, each pixel represents an index to a limited pallete of colors rather than the color itself). Computing the light of every pixel and uploading the result to the VRAM would be extremely expensive (although I must admit I never got to implement that approach so I do not have actual measurements). Instead, we can choose a set of normal directions we want to support (a normals pallete) and assign each of them to a specific entry in the Color RAM (the memory region of the Megadrive graphic's chip holding the pallete data). Then we can compute the lighting for each of these entries and all pixels using them will be automatically updated.
 This technique supports one double sided colored directional light (the color can be different for each side). The lighting function includes diffuse and specular components.
 
 If you prefer to read the code, check directly the file [src/engine/material/material.c](src/engine/material/material.c)
