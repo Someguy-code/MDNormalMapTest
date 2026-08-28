@@ -17,6 +17,7 @@ The idea is exploiting the fact Sega Megadrive graphics are pallete-based (that 
 This technique supports one double sided colored directional light (the color can be different for each side). The lighting function includes diffuse and specular components.
 
 If you prefer to read the code, check directly the file [src/engine/material/material.c](src/engine/material/material.c)
+If you want to see how the resources are loaded, check function **OnEnterLoadingMain** in [src/demo/statemachine/stateloadingmain.c](src/demo/statemachine/stateloadingmain.c)
 
 ### Image conversion
 The first step is converting the source images (albedo, mask and normal map) to a indexed image + a material file containing the actual properties for each material entry.
@@ -81,7 +82,7 @@ It's centainly not free, but it still leaves a substantial amount of time of tim
 
 ## Special thanks
 I'd like to thank the following people for making this project possible
-* Stephane Dallongeville for the creation of SGDK
+* Stephane Dallongeville for the creation of [SGDK](https://github.com/Stephane-D/SGDK)
 * Kaze Emanuar for suggesting encoding normal map in palletized image in [this video](https://www.youtube.com/watch?v=xIUkoUEMf_g&t=462s)
 
 ## Additional credits
