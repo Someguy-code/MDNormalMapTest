@@ -78,7 +78,7 @@ It's centainly not free, but it still leaves a substantial amount of time of tim
 * Aseprite for pixel art edition and image conversion debugging
 * Gimp for additional image editing
 * Blender for sample torus modeling + normal and albdedo textures rendering
-* A custom conversion tool that's not yet ready for public usage
+* A custom conversion tool called [MDNormalMapEncoder](https://github.com/Someguy-code/MDNormalMapEncoder.git)
 
 ## Special thanks
 I'd like to thank the following people for making this project possible
